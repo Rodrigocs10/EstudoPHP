@@ -23,7 +23,26 @@ return array(
          'factories' => array(
              'Zend\Db\Adapter\Adapter'
                      => 'Zend\Db\Adapter\AdapterServiceFactory',
+                'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
          ),
      ),
+
+      'navigation' => array(
+         'default' => array(
+             array(
+                 'label' => 'Página Inicial',
+                 'route' => 'home',
+             ),
+             array(
+                 'label' => 'Coleção de Albuns',
+                 'route' => 'album',
+                 'pages' => array(
+                     
+                 ),
+             ),
+             
+         ),
+     ),
+
 );
 
