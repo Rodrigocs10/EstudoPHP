@@ -11,6 +11,11 @@ namespace Album;
 
  class Module implements AutoloaderProviderInterface, ConfigProviderInterface
  {
+    /*
+        Chamado pelo ModuleManger.
+        - Retorna array PSR-0.
+        - Se não tiver uma array configurada carrega automaticamente o StandarAutoLoader
+    */
      public function getAutoloaderConfig()
      {
          return array(
@@ -25,6 +30,7 @@ namespace Album;
          );
      }
 
+     // Carrega configurações do módulo
      public function getConfig()
      {
          return include __DIR__ . '/config/module.config.php';

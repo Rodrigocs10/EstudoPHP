@@ -1,4 +1,8 @@
 <?php
+/*
+    O nome do controller deve ser única para toda a aplicação, por isso
+    é bom prefixá-lo com o nome do módulo
+*/
 return array(
      'controllers' => array(
          'invokables' => array(
@@ -26,7 +30,7 @@ return array(
          ),
      ),
 
-
+     /* Enviado para o TemplatePathStack, responsável por resolver as views */
      'view_manager' => array(
          'template_path_stack' => array(
              'album' => __DIR__ . '/../view',
